@@ -1,4 +1,3 @@
-# main.py
 from data_processing.data_loader import DataLoader
 from data_processing.data_processor import DataProcessor
 from data_processing.text_preprocessor import TextPreprocessor

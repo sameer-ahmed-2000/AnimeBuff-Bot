@@ -1,5 +1,3 @@
-# data_processing/text_preprocessor.py
-
 class TextPreprocessor:
     @staticmethod
     def preprocess_text(df):

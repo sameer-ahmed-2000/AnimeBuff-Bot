@@ -1,10 +1,6 @@
-# chatbot/chatbot.py
 from sklearn.preprocessing import StandardScaler, LabelEncoder
 from transformers import GPT2LMHeadModel, GPT2Tokenizer
 import torch
-
-# chatbot/chatbot.py
-from sklearn.preprocessing import StandardScaler
 
 class Chatbot:
     def __init__(self, dataset):
@@ -13,8 +9,6 @@ class Chatbot:
         self.dataset = dataset
         self.status_mapping = {0: 'FINISHED', 1: 'ONGOING', 2: 'UNKNOWN', 3: 'UPCOMING'}
         self.type_mapping = {0: 'ONA', 1: 'OVA', 2: 'SPECIAL', 3: 'TV', 4: 'UNKNOWN'}
-
-        # Initialize StandardScaler here
         self.scaler = StandardScaler()
         self.scaler.fit(dataset[['episodes']])
 

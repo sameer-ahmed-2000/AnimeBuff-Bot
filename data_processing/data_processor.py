@@ -1,4 +1,3 @@
-# data_processing/data_processor.py
 from sklearn.preprocessing import StandardScaler, LabelEncoder
 
 class DataProcessor:

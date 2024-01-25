@@ -1,4 +1,3 @@
-# recommenders/tag_based_recommender.py
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import linear_kernel
 from difflib import SequenceMatcher
