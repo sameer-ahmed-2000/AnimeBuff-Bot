@@ -1,4 +1,3 @@
-# app.py
 from flask import Flask, request, jsonify
 from data_processing.data_loader import DataLoader
 from data_processing.data_processor import DataProcessor
@@ -6,8 +5,10 @@ from data_processing.text_preprocessor import TextPreprocessor
 from chatbot.chatbot import Chatbot
 from recommenders.anime_recommender import AnimeRecommenderWithDetails
 from recommenders.tag_based_recommender import TagBasedRecommenderWithDetails
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 # Load data
 data_loader = DataLoader()
@@ -43,6 +44,17 @@ def recommend_tags():
     input_tags = request.json['input_tags']
     recommendations = tag_based_recommender.recommend_by_tags(input_tags)
     return jsonify({'recommendations': recommendations})
+
+# Add a new route for listing endpoints
+@app.route('/endpoints', methods=['GET'])
+def list_endpoints():
+    endpoints = []
+    for rule in app.url_map.iter_rules():
+        endpoints.append({
+            "methods": ','.join(rule.methods),
+            "url": str(rule)
+        })
+    return jsonify({'endpoints': endpoints})
 
 if __name__ == '__main__':
     app.run(debug=True)
