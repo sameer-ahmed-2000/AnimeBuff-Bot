@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#welcomeMessage {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#chatbox {
+    width: 300px;
+    height: 500px;
+    border: 1px solid black;
+    overflow: auto;
+}
+
+#userInput {
+    width: 240px;
+}
+
+#sendButton {
+    width: 50px;
+}

@@ -20,14 +20,3 @@ text_preprocessor.preprocess_text(df)
 chatbot = Chatbot(df)
 anime_recommender = AnimeRecommenderWithDetails(df, chatbot)
 tag_based_recommender = TagBasedRecommenderWithDetails(df, chatbot)
-
-# Example usage
-user_input = "naruto"
-chatbot_response = chatbot.chat(user_input)
-anime_recommendations = anime_recommender.recommend_anime("Your anime title here")
-tag_recommendations = tag_based_recommender.recommend_by_tags(["tag1", "tag2"])
-
-# Print or use the results as needed
-print("Chatbot Response:", chatbot_response)
-print("Anime Recommendations:", anime_recommendations)
-print("Tag Recommendations:", tag_recommendations)
