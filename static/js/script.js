@@ -36,22 +36,30 @@ document.getElementById('sendButton').addEventListener('click', function() {
     .then(data => {
         // Display the chatbot's response
         var response = data.response;
-        var details = response.split(', ');
-        var output = '';
-        for (var i = 0; i < details.length; i++) {
-            if (details[i].startsWith('Picture:')) {
-                var pictureUrl = details[i].slice(10, -2);  // Correctly extract the URL from the string
-                output += '<img src="' + pictureUrl + '"><br>';
-            } else if (details[i].startsWith('Primary Source:')) {
-                var sourceUrl = details[i].slice(16, -2);  // Correctly extract the URL from the string
-                output += 'Primary Source: <a href="' + sourceUrl + '">Link</a><br>';
-            } else {
-                output += details[i] + '<br>';
+        var lines = response.split('\n'); // Split the response into lines
+        var output = 'Chatbot: <br>';
+        lines.forEach(line => {
+            if (line.trim() !== '') { // Skip empty lines
+                var parts = line.split(': '); // Split each line into key-value pairs
+                if (parts[0] === 'Picture') {
+                    // Display the picture
+                    var imageUrl = parts[1].replace(/[\[\]']+/g, '');
+                    output += '<img src="' + imageUrl + '" alt="Anime Image"><br>';
+                } else if (parts[0] === 'Primary Source') {
+                    // Display the primary source link
+                    var sourceUrl = parts[1].replace(/[\[\]']+/g, ''); // Remove square brackets
+                    output += 'Primary Source: <a href="' + sourceUrl.trim() + '">Link</a><br>';
+                } else {
+                    output += line + '<br>';
+                }
             }
-        }
-        document.getElementById('chatbox').innerHTML += 'Chatbot: <br>' + output;
-    });
+        });
+        document.getElementById('chatbox').innerHTML += output;
 
-    // Clear the user's input
-    document.getElementById('userInput').value = '';
+        // Clear the user's input
+        document.getElementById('userInput').value = '';
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
 });

@@ -32,7 +32,7 @@ class Chatbot:
             anime_type = self.type_mapping.get(anime_type_encoded, 'UNKNOWN')
             status = self.status_mapping.get(status_encoded, 'UNKNOWN')
 
-            response = f"Details for {title}:\nTitle: {title}, \nType: {anime_type}, \nEpisodes: {episodes}, \nStatus: {status}, \nPicture: {picture}, \nYear: {year}, \nPrimary Source: {primary_source}"
+            response = f"\nDetails for {title}:\nTitle: {title} \nType: {anime_type} \nEpisodes: {episodes} \nStatus: {status} \nPicture: {picture} \nYear: {year} \nPrimary Source: {primary_source}"
         else:
             response = "Sorry, I couldn't find information for that title."
 

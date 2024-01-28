@@ -1,23 +1,21 @@
-body {
-    font-family: Arial, sans-serif;
+/* Style for user messages */
+.user-message {
+    color: blue;
 }
 
-#welcomeMessage {
-    font-size: 24px;
-    font-weight: bold;
+/* Style for chatbot messages */
+.chatbot-message {
+    color: green;
 }
 
-#chatbox {
-    width: 300px;
-    height: 500px;
-    border: 1px solid black;
-    overflow: auto;
+/* Style for images */
+.chat-image {
+    max-width: 200px;
+    height: auto;
 }
 
-#userInput {
-    width: 240px;
-}
-
-#sendButton {
-    width: 50px;
+/* Style for links */
+.chat-link {
+    color: #007bff;
+    text-decoration: underline;
 }
