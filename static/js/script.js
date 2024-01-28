@@ -17,12 +17,14 @@ document.getElementById('exitButton').addEventListener('click', function() {
 });
 
 // Add event listeners for other buttons as needed
-
 document.getElementById('sendButton').addEventListener('click', function() {
     var userInput = document.getElementById('userInput').value;
 
     // Display the user's message
-    document.getElementById('chatbox').innerHTML += 'User: ' + userInput + '<br>';
+    var userMessageElement = document.createElement('div');
+    userMessageElement.className = 'user-message';
+    userMessageElement.innerHTML = 'User: ' + userInput;
+    document.getElementById('chatbox').appendChild(userMessageElement);
 
     // Send the user's message to the server
     fetch('/api/chat', {
@@ -37,7 +39,7 @@ document.getElementById('sendButton').addEventListener('click', function() {
         // Display the chatbot's response
         var response = data.response;
         var lines = response.split('\n'); // Split the response into lines
-        var output = 'Chatbot: <br>';
+        var output = '';
         lines.forEach(line => {
             if (line.trim() !== '') { // Skip empty lines
                 var parts = line.split(': '); // Split each line into key-value pairs
@@ -54,7 +56,10 @@ document.getElementById('sendButton').addEventListener('click', function() {
                 }
             }
         });
-        document.getElementById('chatbox').innerHTML += output;
+        var chatbotMessageElement = document.createElement('div');
+        chatbotMessageElement.className = 'chatbot-message';
+        chatbotMessageElement.innerHTML = output;
+        document.getElementById('chatbox').appendChild(chatbotMessageElement);
 
         // Clear the user's input
         document.getElementById('userInput').value = '';
@@ -62,4 +67,11 @@ document.getElementById('sendButton').addEventListener('click', function() {
     .catch(error => {
         console.error('Error:', error);
     });
+});
+
+// Make the send button work when the enter key is pressed
+document.getElementById('userInput').addEventListener('keyup', function(event) {
+    if (event.key === 'Enter') {
+        document.getElementById('sendButton').click();
+    }
 });
