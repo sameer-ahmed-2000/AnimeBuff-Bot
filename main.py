@@ -30,3 +30,13 @@ while True:
     chatbot_response = tag_based_recommender.recommend_by_tags(user_input)
     
     print("Chatbot:", chatbot_response)
+
+while True:
+    user_input = input("User: ")
+    if user_input.lower() == "exit":
+        break
+
+    # Get chatbot response from your dataset
+    chatbot_response = anime_recommender(user_input)
+    
+    print("Chatbot:", chatbot_response)

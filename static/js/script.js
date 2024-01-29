@@ -1,12 +1,12 @@
 // Add event listeners to the options
 document.getElementById('getAnimeDetailsOption').addEventListener('click', function() {
-    window.location.href = 'get_anime_details.html';
+    window.location.href = '/chat';
 });
 
 document.getElementById('recommendAnimeOption').addEventListener('click', function() {
-    window.location.href = 'recommend_anime.html';
+    window.location.href = '/recommend/anime';
 });
 
 document.getElementById('recommendGenreOption').addEventListener('click', function() {
-    window.location.href = 'recommend_genre.html';
+    window.location.href = '/recommend/tags';
 });

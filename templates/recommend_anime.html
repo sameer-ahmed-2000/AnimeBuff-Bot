@@ -1,18 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recommend Anime</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Anime Recommendation</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/chat.css">
 </head>
 <body>
-    <h1>Recommend Anime</h1>
-    <div id="recommendations">
-        <!-- Recommended anime will be displayed here -->
-    </div>
-    <input type="text" id="anime-title" placeholder="Enter anime title...">
-    <button onclick="getRecommendations()">Get Recommendations</button>
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <h1>Anime Recommendation</h1>
+    <input type="text" id="animeTitle" placeholder="Enter anime title">
+    <button id="getRecommendationsButton">Get Recommendations</button>
+    <div id="recommendationsContainer"></div>
+
+    <script src="/static/js/recommend_anime.js"></script>
 </body>
 </html>

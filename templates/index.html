@@ -2,18 +2,19 @@
 <html>
 <head>
     <title>Welcome to Anime World</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
 </head>
 <body>
     <h1>Welcome to Anime World</h1>
     <img src="path_to_your_anime_image.jpg" alt="Anime Image">
     <p>Explore the world of anime with us. Choose an option below to get started:</p>
     <div class="options-container">
-        <button class="option" onclick="window.location.href='get_anime_details.html'">Get Anime Details</button>
-        <button class="option" onclick="window.location.href='recommend_anime.html'">Recommend Anime Based on Anime</button>
-        <button class="option" onclick="window.location.href='recommend_genre.html'">Recommend Anime Based on Genre</button>
+        <button class="option" onclick="window.location.href='/chat'">Get Anime Details</button>
+        <button class="option" onclick="window.location.href='/recommend/anime'">Recommend Anime Based on Anime</button>
+        <button class="option" onclick="window.location.href='/recommend/tags'">Recommend Anime Based on Genre</button>
+
     </div>
 
-    <script src="script.js"></script>
+    <script src="../static/js/script.js"></script>
 </body>
 </html>
