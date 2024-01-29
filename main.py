@@ -20,3 +20,13 @@ text_preprocessor.preprocess_text(df)
 chatbot = Chatbot(df)
 anime_recommender = AnimeRecommenderWithDetails(df, chatbot)
 tag_based_recommender = TagBasedRecommenderWithDetails(df, chatbot)
+
+while True:
+    user_input = input("User: ")
+    if user_input.lower() == "exit":
+        break
+
+    # Get chatbot response from your dataset
+    chatbot_response = tag_based_recommender.recommend_by_tags(user_input)
+    
+    print("Chatbot:", chatbot_response)

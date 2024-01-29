@@ -1,0 +1,89 @@
+/* Style for user messages */
+.user-message {
+    color: blue;
+}
+
+/* Style for chatbot messages */
+.chatbot-message {
+    color: green;
+}
+
+/* Style for images */
+.chat-image {
+    max-width: 200px;
+    height: auto;
+}
+
+/* Style for links */
+.chat-link {
+    color: #007bff;
+    text-decoration: underline;
+}
+/* Style for chatbox */
+#chatbox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Style for user messages */
+.user-message {
+    color: blue;
+    align-self: flex-end;
+}
+
+/* Style for chatbot messages */
+.chatbot-message {
+    color: green;
+    align-self: flex-start;
+}
+/* Style for chatbox */
+/* Style for chatbox */
+#chatbox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 2px solid #000;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 75%;
+    height: auto;
+    resize: none;
+    overflow: auto;
+}
+
+/* Style for user messages */
+.user-message {
+    border: 1px solid #cccccc;
+    padding: 10px;
+    color: rgb(0, 106, 255);
+    align-self: flex-end;
+}
+
+/* Style for chatbot messages */
+.chatbot-message {
+    color: green;
+    align-self: flex-start;
+}
+
+/* Style for input field */
+#userInput {
+    border: 2px solid #000;
+    padding: 5px;
+    width: 75%;
+    height: auto;
+}
+
+/* Style for send and exit buttons */
+#sendButton, #exitButton {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}

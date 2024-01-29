@@ -27,3 +27,4 @@ class AnimeRecommenderWithDetails:
             return recommendations
         else:
             return None
+

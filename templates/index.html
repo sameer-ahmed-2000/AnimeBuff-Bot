@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Chatbot</title>
-    <link rel="stylesheet" type="text/css" href="../static/css/styles.css">
+    <title>Welcome to Anime World</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <div id="welcomeMessage">Welcome to Anime Chatbot!</div>
-    <button id="getAnimeDetailsButton">Get Anime Details</button>
-    <button id="animeRecommendationsButton">Anime Recommendations</button>
-    <div id="chatbox"></div>
-    <input id="userInput" type="text" placeholder="Type a message...">
-    <button id="sendButton">Send</button>
-    <div id="pinSymbol">
-        <button id="exitButton">Exit</button>
-        <!-- Add more buttons as needed -->
+    <h1>Welcome to Anime World</h1>
+    <img src="path_to_your_anime_image.jpg" alt="Anime Image">
+    <p>Explore the world of anime with us. Choose an option below to get started:</p>
+    <div class="options-container">
+        <button class="option" onclick="window.location.href='get_anime_details.html'">Get Anime Details</button>
+        <button class="option" onclick="window.location.href='recommend_anime.html'">Recommend Anime Based on Anime</button>
+        <button class="option" onclick="window.location.href='recommend_genre.html'">Recommend Anime Based on Genre</button>
     </div>
 
-    <script src="../static/js/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
