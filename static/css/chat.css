@@ -24,6 +24,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    
 }
 
 /* Style for user messages */
@@ -76,14 +77,26 @@
 
 /* Style for send and exit buttons */
 #sendButton, #exitButton {
-    background-color: #4CAF50; /* Green */
+    background-color: grey; /* Green */
     border: none;
-    color: white;
-    padding: 15px 32px;
+    color: black;
+    padding: 11px 22px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 10px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+#getRecommendationsButton{
+    background-color: grey; /* Green */
+    border: none;
+    color: black;
+    padding: 11px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
     margin: 4px 2px;
     cursor: pointer;
 }

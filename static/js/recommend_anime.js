@@ -63,3 +63,8 @@ function getAnimeRecommendations() {
 
 // Add event listener for the button
 document.getElementById('getRecommendationsButton').addEventListener('click', getAnimeRecommendations);
+document.getElementById('exitButton').addEventListener('click', function() {
+    // Handle "Exit" button click
+    // Redirect to the main page
+    window.location.href = '/';
+});

@@ -3,18 +3,46 @@
 <head>
     <title>Welcome to Anime World</title>
     <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
+    <style>
+        /* Additional CSS for dropdown */
+        .navbar-options {
+            display: none;
+        }
+        .show {
+            display: block;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to Anime World</h1>
-    <img src="path_to_your_anime_image.jpg" alt="Anime Image">
-    <p>Explore the world of anime with us. Choose an option below to get started:</p>
-    <div class="options-container">
-        <button class="option" onclick="window.location.href='/chat'">Get Anime Details</button>
-        <button class="option" onclick="window.location.href='/recommend/anime'">Recommend Anime Based on Anime</button>
-        <button class="option" onclick="window.location.href='/recommend/tags'">Recommend Anime Based on Genre</button>
-
+    <!-- Navigation Bar -->
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <div class="navbar-title">
+            <a href="#">ANIME BUFF BOT</a>
+        </div>
+        <div class="navbar-options" id="navbarOptions">
+            <a id="getAnimeDetailsOption" href="/chat">Get Anime Details</a>
+            <a id="recommendAnimeOption" href="/recommend/anime">Recommend Anime Based on Anime</a>
+            <a id="recommendGenreOption" href="/recommend/tags">Recommend Anime Based on Genre</a>
+        </div>
+        <div class="center">
+            <div class="navbar-toggle center-vertical" onclick="toggleOptions()">
+                <div class="toggle-icon">☰</div>
+            </div>
+        </div>
     </div>
 
+    <!-- Content Section -->
+    <h1>Welcome to Anime World</h1>
+    <!-- <img src="/static/img/hBpHZK.webp" alt="Anime Image"> -->
+    <p>Explore the world of anime with us. Choose an option below to get started:</p>
+
     <script src="../static/js/script.js"></script>
+    <script>
+        function toggleOptions() {
+            var options = document.getElementById("navbarOptions");
+            options.classList.toggle("show");
+        }
+    </script>
 </body>
 </html>
