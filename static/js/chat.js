@@ -1,15 +1,3 @@
-// document.getElementById('getAnimeDetailsButton').addEventListener('click', function() {
-//     // Handle "Get Anime Details" button click
-//     // Redirect to the appropriate page
-//     window.location.href = 'recommend_anime.html';
-// });
-
-// document.getElementById('animeRecommendationsButton').addEventListener('click', function() {
-//     // Handle "Anime Recommendations" button click
-//     // Redirect to the appropriate page
-//     window.location.href = 'recommend_tags.html';
-// });
-
 document.getElementById('exitButton').addEventListener('click', function() {
     // Handle "Exit" button click
     // Redirect to the main page
